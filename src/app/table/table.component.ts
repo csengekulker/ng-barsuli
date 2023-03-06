@@ -31,9 +31,7 @@ export class TableComponent implements OnInit {
             score: scr.score,
           }
 
-          console.log(item);
           array.push(item)
-
         }
       })
     });

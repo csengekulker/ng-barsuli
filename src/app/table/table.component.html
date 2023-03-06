@@ -3,7 +3,7 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Name</th>
-            <th scope="col">Gener</th>
+            <th scope="col">Gender</th>
             <th scope="col">Score</th>
             <th scope="col">Group</th>
         </tr>
@@ -12,7 +12,12 @@
         <tr *ngFor="let each of studentScores">
             <th scope="row">{{each.id}}</th>
             <td>{{each.name}}</td>
-            <td>{{each.gender}}</td>
+            <td *ngIf="each.gender == 'férfi' ">
+                <i class="bi bi-gender-male"></i>
+            </td>
+            <td *ngIf="each.gender == 'nő' ">
+                <i class="bi bi-gender-female"></i>
+            </td>
             <td>{{each.score}}</td>
             <td>{{each.group}}</td>
         </tr>
